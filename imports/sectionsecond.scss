@@ -1,0 +1,149 @@
+/* Deuxieme section NOS PROJETS , nav et photo du portefolio */
+.section2 {
+    background-color: #f5f5f5;
+    margin-top: 200px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.nosprojets {
+    text-align: center;
+    font-size: 2.4em;
+    opacity: 0.8;
+}
+.nav2 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.deuxiemeul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-right: 35px;
+}
+.deuxiemeul li {
+    padding: 14px;
+    background-color: #e5e5e5;
+}
+.navtwo {
+    margin-bottom: 30px;
+    position: relative;
+}
+.navtwo li {
+    top: 100px;
+}
+.deuxiemeul .navtwo1 {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.deuxiemeul .navtwo2 {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.flechette2 {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid;
+    margin-left: 30px;
+    color: #4494bb;
+    top: 51px;
+    left: 5px;
+    display: none;
+}
+.flechette {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid;
+    margin-left: 30px;
+    color: #4494bb;
+    top: 51px;
+    left: 10px;
+    display: none;
+}
+.deuxiemeul .navtwo1 {
+    background-color: #5cadd3;
+    border-bottom: 4px solid #4494bb;
+}
+.flechettedefaut {
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid;
+    margin-left: 30px;
+    color: #4494bb;
+    top: 51px;
+    left: 10px;
+}
+.navtwo a {
+    color: #65696e;
+    text-decoration: none;
+}
+.navtwo1 a {
+    color: white;
+}
+.navtwo:hover .flechette {
+    display: block;
+}
+.navtwo:hover .flechette2 {
+    display: block;
+}
+.navtwo:hover {
+    background-color: #5cadd3;
+    border-bottom: 4px solid #4494bb;
+}
+.navtwo:hover a {
+    color: white;
+}
+.fa-eye {
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #3baed7;
+    float: right;
+    position: relative;
+    right: 20px;
+    bottom: 70px;
+}
+#imagesProjets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+#imagesProjets li {
+    list-style-type: none;
+    width: 400px;
+    padding: 5px;
+}
+#imagesProjets figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+#imagesProjets img {
+    width: 100%;
+    height: 250px;
+}
+#imagesProjets img:hover + figcaption,
+#imagesProjets figcaption:hover {
+    visibility: visible;
+    cursor: pointer;
+}
+#imagesProjets figcaption {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 4px;
+    visibility: hidden;
+}
+.textportfo {
+    font-size: 13px;
+}
+#imagesProjets strong {
+    font-size: 18px;
+}

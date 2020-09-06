@@ -1,0 +1,161 @@
+/* Partie RESPONSIVE balise VIEWPORT dans html */
+@media screen and (max-width: 1024px) {
+    .buttonimage {
+        margin-top: 10px;
+    }
+    .letout {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .texteimage {
+        margin-bottom: -5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .texteimage {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    .paraimage {
+        font-size: 12px;
+    }
+    .buttonimage {
+        padding: 3px;
+        width: 110px;
+        margin-top: 16px;
+    }
+    #conteneur-fleche {
+        top: 58%;
+    }
+    #conteneur-fleche .fleche i {
+        width: 40px;
+        height: 55px;
+        border-radius: 60px;
+        line-height: 55px;
+    }
+    #flechegauche i {
+        right: 25px;
+    }
+    #flechedroite i {
+        left: 25px;
+    }
+    .background {
+        position: static;
+        background-color: #4494bb;
+        width: 100%;
+        height: 600px;
+    }
+    .formulaire {
+        left: 0;
+        opacity: 1;
+        color: #64686d;
+        width: 100%;
+        margin-right: 0px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    #send {
+        margin: auto;
+    }
+    .textdansform {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .bg img {
+        overflow: hidden;
+    }
+    .bg {
+        margin-top: 90px;
+    }
+    .texteimage {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 484px) {
+    .texteimage {
+        margin-top: 30px;
+    }
+    .paraimage {
+        font-size: 8px;
+        display: none;
+    }
+    .deuxiemeul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        margin-right: 35px;
+        text-align: center;
+    }
+    .deuxiemeul .navtwo {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    .deuxiemeul .navtwo {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .navtwo:hover .flechette {
+        display: none;
+    }
+    .navtwo:hover .flechette2 {
+        display: none;
+    }
+    .flechettedefaut {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .texteimage {
+        font-size: 10px;
+    }
+    .paraimage {
+        font-size: 8px;
+    }
+    .buttonimage {
+        padding: 3px;
+        width: 110px;
+        margin-top: 16px;
+    }
+    #conteneur-fleche {
+        top: 65%;
+    }
+
+    #conteneur-fleche .fleche i {
+        width: 30px;
+        height: 40px;
+        border-radius: 60px;
+        line-height: 40px;
+    }
+    #flechegauche i {
+        right: 14px;
+    }
+    #flechedroite i {
+        left: 14px;
+    }
+    .icone2,
+    .icone1,
+    .icone3 {
+        font-size: 19px;
+        float: left;
+        margin-left: -120px;
+        color: #5cadd3;
+        border-radius: 100px;
+        background-color: white;
+        padding: 25px;
+        border: 1px solid #dbdbdb;
+        margin-top: 6px;
+        position: absolute;
+    }
+    .fa-circle {
+        position: absolute;
+        font-size: 10px;
+        border: 5px solid white;
+        border-radius: 30px;
+        margin-left: 13px;
+        margin-top: 0px;
+    }
+}

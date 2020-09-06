@@ -1,0 +1,96 @@
+/* premiere section NOS SERVICE */
+section {
+    margin-top: 200px;
+}
+.sectionh1 {
+    text-align: center;
+    font-size: 2.4em;
+    opacity: 0.8;
+}
+.traitetrond {
+    display: flex;
+    justify-content: center;
+}
+.traitavant {
+    border-top: 1px solid #000;
+    width: 40px;
+    margin-top: 7px;
+    opacity: 0.2;
+}
+.rondbleu {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background: #5cadd3;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+p {
+    color: #63686d;
+}
+.traitapres {
+    border-top: 1px solid #000;
+    width: 40px;
+    margin-top: 7px;
+    opacity: 0.2;
+}
+.underrondbleu {
+    text-align: center;
+    color: #63686d;
+}
+.letout {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.imac img {
+    width: 100%;
+}
+.textmiddle {
+    margin-top: 100px;
+    margin-left: 130px;
+}
+.icone1 {
+    font-size: 27px;
+    float: left;
+    margin-left: -120px;
+    color: #5cadd3;
+    border-radius: 100px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dbdbdb;
+    position: absolute;
+    margin-top: 6px;
+}
+.icone2 {
+    font-size: 27px;
+    float: left;
+    margin-left: -120px;
+    color: #5cadd3;
+    border-radius: 100px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dbdbdb;
+    margin-top: 6px;
+    position: absolute;
+}
+.fa-circle {
+    position: absolute;
+    font-size: 14px;
+    border: 5px solid white;
+    border-radius: 30px;
+    margin-left: 13px;
+    margin-top: 5px;
+}
+.icone3 {
+    font-size: 27px;
+    float: left;
+    margin-left: -120px;
+    color: #5cadd3;
+    border-radius: 100px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dbdbdb;
+    margin-top: 6px;
+    position: absolute;
+}

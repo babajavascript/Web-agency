@@ -1,627 +1,742 @@
-@font-face{
-    font-family: 'Roboto';
-    src: url('fonts/Roboto-Black.ttf');
-    src: url('fonts/Roboto-Medium.ttf');
+@charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Black.ttf");
+  src: url("fonts/Roboto-Medium.ttf");
 }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'roboto';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto";
 }
+
 /* En-tête logo web agency et barre de nav */
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 1;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1;
 }
-nav{
-    width: 100%;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
+
+nav {
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
-.premiereul li{
-    padding: 30px 10px;
+
+.premiereul li {
+  padding: 30px 10px;
 }
-.premiereul a{
-    text-decoration: none;
-    color: #63686D;
+
+.premiereul a {
+  text-decoration: none;
+  color: #63686d;
 }
-.premiereul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 300px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
+
+.premiereul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
-.premiereul  li:hover a {
-    border-top: 5px solid #3BAED7;
-    padding-top: 45px;
+
+.premiereul li:hover a {
+  border-top: 5px solid #3baed7;
+  padding-top: 45px;
 }
-.navonedefault a{ 
-    border-top: 5px solid #3BAED7;
-    padding-top: 45px;
+
+.navonedefault a {
+  border-top: 5px solid #3baed7;
+  padding-top: 45px;
 }
-.navone:link{
-    color: #63686D;
+
+.navone:link {
+  color: #63686d;
 }
+
 .navone a {
-    color: #63686D;
+  color: #63686d;
 }
-.navone a:hover{
-    color: #333333;
+
+.navone a:hover {
+  color: #333333;
 }
-.bg { /*Image petite fille */
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+
+.bg {
+  /*Image petite fille */
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
+
 .bg figure {
-    width: 100%;
-    margin: 0;
-    position: relative;
+  width: 100%;
+  margin: 0;
+  position: relative;
 }
+
 .bg figure img {
-    width: 100%;
-    margin-top: 115px;
+  width: 100%;
+  margin-top: 115px;
 }
+
 /* les fleches  sur l'image petite fille*/
 #conteneur-fleche {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
 }
-#conteneur-fleche .fleche i {
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    line-height: 60px;
-    cursor: pointer;
-    color: white;
-}
-#flechegauche i {
-    padding-right: 15px;
-    text-align: right;
-    position: relative;
-    right: 40px;
-}
-#flechedroite i {
-    padding-left: 15px;
-    text-align: left;
-    position: relative;
-    left: 40px;
-}
-/* le texte et le bouton dans l'image */
-.textflottant { 
-    width: 40%;
-    position: absolute;
-    left: 10%;
-    top: 40%;
-    color: white;
-}
-.texteimage {
-    color: white;
-    font-size: 2em ;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-.paraimage{
-    margin-top: 15px;
-}
-.texteimage span {
-    color: #5CADD3
-}
-.buttonimage {
-    background-color: #5CADD3;
-    text-align: center;
-    padding: 10px;
-    width: 110px;
-    border-radius: 3px;
-    box-shadow: 0 3px 0 #1D8DB5;
-    margin-top: 30px;
-    font-size: 1.2em;
-}
-.buttonimage a:link {
-    color: white;
-}
-.buttonimage a {
-    text-decoration: none;
-}
-.buttonimage a:visited {
-    color: white;
-}
-.buttonimage:hover{
-    font-weight: bold;
 
+#conteneur-fleche .fleche i {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  color: white;
 }
-.barredefil{ 
-    width: 10%;
-    height: 5px;
-    background-color: #5CADD3;
-    position: absolute;
-    bottom: 0px;
+
+#flechegauche i {
+  padding-right: 15px;
+  text-align: right;
+  position: relative;
+  right: 40px;
 }
+
+#flechedroite i {
+  padding-left: 15px;
+  text-align: left;
+  position: relative;
+  left: 40px;
+}
+
+/* le texte et le bouton dans l'image */
+.textflottant {
+  width: 40%;
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  color: white;
+}
+
+.texteimage {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.paraimage {
+  margin-top: 15px;
+}
+
+.texteimage span {
+  color: #5cadd3;
+}
+
+.buttonimage {
+  background-color: #5cadd3;
+  text-align: center;
+  padding: 10px;
+  width: 110px;
+  border-radius: 3px;
+  box-shadow: 0 3px 0 #1d8db5;
+  margin-top: 30px;
+  font-size: 1.2em;
+}
+
+.buttonimage a:link {
+  color: white;
+}
+
+.buttonimage a {
+  text-decoration: none;
+}
+
+.buttonimage a:visited {
+  color: white;
+}
+
+.buttonimage:hover {
+  font-weight: bold;
+}
+
+.barredefil {
+  width: 10%;
+  height: 5px;
+  background-color: #5cadd3;
+  position: absolute;
+  bottom: 0px;
+}
+
 /* premiere section NOS SERVICE */
-section { 
-    margin-top: 200px;
+section {
+  margin-top: 200px;
 }
+
 .sectionh1 {
-    text-align: center;
-    font-size: 2.4em;
-    opacity: 0.8;
+  text-align: center;
+  font-size: 2.4em;
+  opacity: 0.8;
 }
+
 .traitetrond {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .traitavant {
-    border-top: 1px solid #000;
-    width: 40px;
-    margin-top: 7px;
-    opacity: 0.2;
+  border-top: 1px solid #000;
+  width: 40px;
+  margin-top: 7px;
+  opacity: 0.2;
 }
+
 .rondbleu {
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
-    background: #5CADD3;
-    margin-left: 5px;
-    margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  background: #5cadd3;
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
 p {
-    color: #63686D;
+  color: #63686d;
 }
+
 .traitapres {
-    border-top: 1px solid #000;
-    width: 40px;
-    margin-top: 7px;
-    opacity: 0.2;
+  border-top: 1px solid #000;
+  width: 40px;
+  margin-top: 7px;
+  opacity: 0.2;
 }
+
 .underrondbleu {
-    text-align: center;
-    color: #63686D;
+  text-align: center;
+  color: #63686d;
 }
+
 .letout {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
-.imac img{
-    width: 100%;
+
+.imac img {
+  width: 100%;
 }
+
 .textmiddle {
-    margin-top: 100px;
-    margin-left: 130px;
+  margin-top: 100px;
+  margin-left: 130px;
 }
+
 .icone1 {
-    font-size: 27px;
-    float: left;
-    margin-left: -120px;
-    color: #5CADD3;
-    border-radius: 100px;
-    background-color: white;
-    padding: 25px;
-    border: 1px solid #dbdbdb;
-    position: absolute;
-    margin-top: 6px;
+  font-size: 27px;
+  float: left;
+  margin-left: -120px;
+  color: #5cadd3;
+  border-radius: 100px;
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #dbdbdb;
+  position: absolute;
+  margin-top: 6px;
 }
+
 .icone2 {
-    font-size: 27px;
-    float: left;
-    margin-left: -120px;
-    color: #5CADD3;
-    border-radius: 100px;
-    background-color: white;
-    padding: 25px;
-    border: 1px solid #dbdbdb;
-    margin-top: 6px;
-    position: absolute;
+  font-size: 27px;
+  float: left;
+  margin-left: -120px;
+  color: #5cadd3;
+  border-radius: 100px;
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #dbdbdb;
+  margin-top: 6px;
+  position: absolute;
 }
+
 .fa-circle {
-    position: absolute;
-    font-size: 14px;
-    border: 5px solid white;
-    border-radius: 30px;
-    margin-left: 13px;
-    margin-top: 5px;
+  position: absolute;
+  font-size: 14px;
+  border: 5px solid white;
+  border-radius: 30px;
+  margin-left: 13px;
+  margin-top: 5px;
 }
+
 .icone3 {
-    font-size: 27px;
-    float: left;
-    margin-left: -120px;
-    color: #5CADD3;
-    border-radius: 100px;
-    background-color: white;
-    padding: 25px;
-    border: 1px solid #dbdbdb;
-    margin-top: 6px;
-    position: absolute;
+  font-size: 27px;
+  float: left;
+  margin-left: -120px;
+  color: #5cadd3;
+  border-radius: 100px;
+  background-color: white;
+  padding: 25px;
+  border: 1px solid #dbdbdb;
+  margin-top: 6px;
+  position: absolute;
 }
+
 /* Deuxieme section NOS PROJETS , nav et photo du portefolio */
-.section2 { 
-    background-color: #F5F5F5;
-    margin-top: 200px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+.section2 {
+  background-color: #f5f5f5;
+  margin-top: 200px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
+
 .nosprojets {
-    text-align: center;
-    font-size: 2.4em;
-    opacity: 0.8;
+  text-align: center;
+  font-size: 2.4em;
+  opacity: 0.8;
 }
+
 .nav2 {
-    margin-bottom: 50px;
-    margin-top: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
+
 .deuxiemeul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-right: 35px;
+}
+
+.deuxiemeul li {
+  padding: 14px;
+  background-color: #e5e5e5;
+}
+
+.navtwo {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.navtwo li {
+  top: 100px;
+}
+
+.deuxiemeul .navtwo1 {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.deuxiemeul .navtwo2 {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.flechette2 {
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid;
+  margin-left: 30px;
+  color: #4494bb;
+  top: 51px;
+  left: 5px;
+  display: none;
+}
+
+.flechette {
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid;
+  margin-left: 30px;
+  color: #4494bb;
+  top: 51px;
+  left: 10px;
+  display: none;
+}
+
+.deuxiemeul .navtwo1 {
+  background-color: #5cadd3;
+  border-bottom: 4px solid #4494bb;
+}
+
+.flechettedefaut {
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid;
+  margin-left: 30px;
+  color: #4494bb;
+  top: 51px;
+  left: 10px;
+}
+
+.navtwo a {
+  color: #65696e;
+  text-decoration: none;
+}
+
+.navtwo1 a {
+  color: white;
+}
+
+.navtwo:hover .flechette {
+  display: block;
+}
+
+.navtwo:hover .flechette2 {
+  display: block;
+}
+
+.navtwo:hover {
+  background-color: #5cadd3;
+  border-bottom: 4px solid #4494bb;
+}
+
+.navtwo:hover a {
+  color: white;
+}
+
+.fa-eye {
+  color: white;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #3baed7;
+  float: right;
+  position: relative;
+  right: 20px;
+  bottom: 70px;
+}
+
+#imagesProjets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+#imagesProjets li {
+  list-style-type: none;
+  width: 400px;
+  padding: 5px;
+}
+
+#imagesProjets figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#imagesProjets img {
+  width: 100%;
+  height: 250px;
+}
+
+#imagesProjets img:hover + figcaption,
+#imagesProjets figcaption:hover {
+  visibility: visible;
+  cursor: pointer;
+}
+
+#imagesProjets figcaption {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 4px;
+  visibility: hidden;
+}
+
+.textportfo {
+  font-size: 13px;
+}
+
+#imagesProjets strong {
+  font-size: 18px;
+}
+
+/* Le footer, donc l'IFRAM le background et le formulaire */
+.background {
+  position: absolute;
+  background-color: #4494bb;
+  width: 100%;
+  height: 600px;
+}
+
+.fram {
+  width: 100%;
+  height: 600px;
+  opacity: 0.72;
+  border: 0;
+}
+
+.formulaire {
+  position: relative;
+  background-color: white;
+  opacity: 0.85;
+  margin-right: 90px;
+  margin-top: 35px;
+  color: #64686d;
+  width: 350px;
+  float: right;
+  background-color: #f1f5f7;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 15px;
+  font-family: "Roboto";
+}
+
+textarea::-webkit-input-placeholder {
+  font-size: 15px;
+  font-family: "Roboto";
+}
+
+.textdansform {
+  margin-left: 32px;
+}
+
+.textdansform h1 {
+  color: black;
+}
+
+#name {
+  width: 280px;
+  height: 25px;
+}
+
+#email {
+  width: 280px;
+  height: 25px;
+}
+
+#sujet {
+  width: 280px;
+  height: 25px;
+}
+
+#message {
+  width: 280px;
+  height: 150px;
+}
+
+input[type=submit] {
+  background-color: #3baed7;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  width: 130px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-family: "roboto";
+}
+
+/* Partie RESPONSIVE balise VIEWPORT dans html */
+@media screen and (max-width: 1024px) {
+  .buttonimage {
+    margin-top: 10px;
+  }
+
+  .letout {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  .texteimage {
+    margin-bottom: -5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .texteimage {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .paraimage {
+    font-size: 12px;
+  }
+
+  .buttonimage {
+    padding: 3px;
+    width: 110px;
+    margin-top: 16px;
+  }
+
+  #conteneur-fleche {
+    top: 58%;
+  }
+
+  #conteneur-fleche .fleche i {
+    width: 40px;
+    height: 55px;
+    border-radius: 60px;
+    line-height: 55px;
+  }
+
+  #flechegauche i {
+    right: 25px;
+  }
+
+  #flechedroite i {
+    left: 25px;
+  }
+
+  .background {
+    position: static;
+    background-color: #4494bb;
+    width: 100%;
+    height: 600px;
+  }
+
+  .formulaire {
+    left: 0;
+    opacity: 1;
+    color: #64686d;
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  #send {
+    margin: auto;
+  }
+
+  .textdansform {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 577px) {
+  .bg img {
+    overflow: hidden;
+  }
+
+  .bg {
+    margin-top: 90px;
+  }
+
+  .texteimage {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 484px) {
+  .texteimage {
+    margin-top: 30px;
+  }
+
+  .paraimage {
+    font-size: 8px;
+    display: none;
+  }
+
+  .deuxiemeul {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     list-style: none;
     margin-right: 35px;
-}
-.deuxiemeul li {
-    padding: 14px;
-    background-color: #E5E5E5;
-}
-.navtwo {
-    margin-bottom: 30px;
-    position: relative;
-}
-.navtwo li {
-    top: 100px;
-}
-.deuxiemeul .navtwo1 {
+    text-align: center;
+  }
+
+  .deuxiemeul .navtwo {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-}
-.deuxiemeul .navtwo2 {
+  }
+
+  .deuxiemeul .navtwo {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-.flechette2 {
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid;
-    margin-left: 30px;
-    color: #4494BB;
-    top: 51px;
-    left: 5px;
+  }
+
+  .navtwo:hover .flechette {
     display: none;
-}
-.flechette {
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid;
-    margin-left: 30px;
-    color: #4494BB;
-    top: 51px;
-    left: 10px;
+  }
+
+  .navtwo:hover .flechette2 {
     display: none;
+  }
+
+  .flechettedefaut {
+    display: none;
+  }
 }
-.deuxiemeul .navtwo1{
-    background-color: #5CADD3;
-    border-bottom: 4px solid #4494BB;
-}
-.flechettedefaut {
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid;
-    margin-left: 30px;
-    color: #4494BB;
-    top: 51px;
-    left: 10px;
-}
-.navtwo a{
-    color: #65696E;
-    text-decoration: none;
-}
-.navtwo1 a{
-    color: white;
-}
-.navtwo:hover .flechette {
-    display: block;
-}
-.navtwo:hover .flechette2 {
-    display: block;
-}
-.navtwo:hover {
-    background-color: #5CADD3;
-    border-bottom: 4px solid #4494BB;
-}
-.navtwo:hover a {
-    color: white;
-}
-.fa-eye {
-    color: white;
-    border: 2px solid white;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #3BAED7;
-    float: right;
-    position: relative;
-    right: 20px;
-    bottom: 70px;    
-}
-#imagesProjets {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-}
-#imagesProjets li {
-    list-style-type: none;
-    width: 400px;
-    padding: 5px;
-}
-#imagesProjets figure {
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-}
-#imagesProjets img {
-    width: 100%;
-    height: 250px;
-}
-#imagesProjets img:hover + figcaption, #imagesProjets figcaption:hover {
-    visibility: visible;
-    cursor: pointer;
-}
-#imagesProjets figcaption {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    bottom: 4px;
-    visibility: hidden;
-}
-.textportfo {
-    font-size: 13px;
-}
-#imagesProjets strong {
-    font-size: 18px;
-}
-/* Le footer, donc l'IFRAM le background et le formulaire */
-.background{
-    position: absolute;
-    background-color: #4494BB;
-    width: 100%;
-    height: 600px;
-}
-.fram {
-    width: 100%;
-    height: 600px;
-    opacity: 0.72;
-    border: 0;
-}
-.formulaire {
-    position: relative;
+@media screen and (max-width: 425px) {
+  .texteimage {
+    font-size: 10px;
+  }
+
+  .paraimage {
+    font-size: 8px;
+  }
+
+  .buttonimage {
+    padding: 3px;
+    width: 110px;
+    margin-top: 16px;
+  }
+
+  #conteneur-fleche {
+    top: 65%;
+  }
+
+  #conteneur-fleche .fleche i {
+    width: 30px;
+    height: 40px;
+    border-radius: 60px;
+    line-height: 40px;
+  }
+
+  #flechegauche i {
+    right: 14px;
+  }
+
+  #flechedroite i {
+    left: 14px;
+  }
+
+  .icone2,
+.icone1,
+.icone3 {
+    font-size: 19px;
+    float: left;
+    margin-left: -120px;
+    color: #5cadd3;
+    border-radius: 100px;
     background-color: white;
-    opacity: 0.85;
-    margin-right: 90px;
-    margin-top: 35px;
-    color: #64686D;
-    width: 350px;
-    float: right;
-    background-color: #F1F5F7;
-}
-input::-webkit-input-placeholder {
-    font-size: 15px;
-    font-family: 'Roboto';
-}
-textarea::-webkit-input-placeholder {
-    font-size: 15px;
-    font-family: 'Roboto';
-}
-.textdansform {
-    margin-left: 32px;
-}
-.textdansform h1{
-    color: black;
-}
-#name {
-    width: 280px;
-    height: 25px;
-}
-#email {
-    width: 280px;
-    height: 25px;
-}
-#sujet {
-    width: 280px;
-    height: 25px;
-}
-#message {
-    width: 280px;
-    height: 150px;
-}
-input[type=submit] {
-    background-color: #3BAED7;
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    padding: 10px;
-    width: 130px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-bottom: 15px;
-    font-family: 'roboto';
-}
-/* Partie RESPONSIVE balise VIEWPORT dans html */
-@media screen and (max-width: 1024px){
-    .buttonimage{
-        margin-top: 10px;
-    }
-    .letout {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .texteimage{
-        margin-bottom: -5px;
-    }
-}
-@media screen and (max-width: 768px){
-    .texteimage {
-        margin-top: 30px;
-        font-size: 18px;
-    }
-    .paraimage {
-        font-size: 12px;
-    }
-    .buttonimage {
-        padding: 3px;
-        width: 110px;
-        margin-top: 16px;
-    }
-    #conteneur-fleche {
-        top: 58%;
-    }
-    #conteneur-fleche .fleche i {
-        width: 40px;
-        height: 55px;
-        border-radius: 60px;
-        line-height: 55px;
-    }
-    #flechegauche i{
-        right: 25px;
-    }
-    #flechedroite i{
-        left: 25px;
-    }
-    .background{
-        position: static;
-        background-color: #4494BB;
-        width: 100%;
-        height: 600px;
-    }
-    .formulaire{
-        left: 0;
-        opacity: 1;
-        color: #64686D;
-        width: 100%;
-        margin-right: 0px;
-        margin-top: 0px;
-        text-align: center;
-    }
-    #send {
-        margin: auto;
-    }
-    .textdansform{
-        margin-left: 10px;
-    }
-}
-    
-@media screen and (max-width: 577px){
-    .bg img{
-        overflow: hidden;
-    }
-    .bg{
-        margin-top: 90px;
-    }
-    .texteimage{
-        margin-top: 10px;
-    }
+    padding: 25px;
+    border: 1px solid #dbdbdb;
+    margin-top: 6px;
+    position: absolute;
+  }
+
+  .fa-circle {
+    position: absolute;
+    font-size: 10px;
+    border: 5px solid white;
+    border-radius: 30px;
+    margin-left: 13px;
+    margin-top: 0px;
+  }
 }
 
-@media screen and (max-width: 484px){
-    .texteimage {
-        margin-top: 30px;
-    }
-    .paraimage {
-        font-size: 8px;
-        display: none;
-    }
-    .deuxiemeul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        list-style: none;
-        margin-right: 35px;
-        text-align: center;
-    }
-    .deuxiemeul .navtwo {
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-    .deuxiemeul .navtwo {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-    }
-    .navtwo:hover .flechette {
-        display: none;
-    }
-    .navtwo:hover .flechette2 {
-        display: none;
-    }
-    .flechettedefaut{
-        display: none;
-    }
-}
-@media screen and (max-width: 425px){
-    .texteimage {
-        font-size: 10px;
-    }
-    .paraimage {
-        font-size: 8px;
-    }
-    .buttonimage {
-        padding: 3px;
-        width: 110px;
-        margin-top: 16px;
-    }
-    #conteneur-fleche {
-        top: 65%;
-    }
-
-    #conteneur-fleche .fleche i {
-        width: 30px;
-        height: 40px;
-        border-radius: 60px;
-        line-height: 40px;
-    }
-    #flechegauche i {
-        right: 14px;
-    }
-    #flechedroite i{
-        left: 14px;
-    }
-    .icone2, .icone1, .icone3 {
-        font-size: 19px;
-        float: left;
-        margin-left: -120px;
-        color: #5CADD3;
-        border-radius: 100px;
-        background-color: white;
-        padding: 25px;
-        border: 1px solid #dbdbdb;
-        margin-top: 6px;
-        position: absolute;
-    }
-    .fa-circle {
-        position: absolute;
-        font-size: 10px;
-        border: 5px solid white;
-        border-radius: 30px;
-        margin-left: 13px;
-        margin-top: 0px;
-    }
-}
+/*# sourceMappingURL=style.css.map */

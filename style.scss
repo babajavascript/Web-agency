@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Black.ttf");
+    src: url("fonts/Roboto-Medium.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "roboto";
+}
+//Nav bar + img little girl //
+@import "imports/header.scss";
+
+// section NOS SERVICES //
+@import "imports/section.scss";
+
+// Section NosProjets portefolio //
+@import "imports/sectionsecond.scss";
+
+// Footer map form //
+@import "imports/footer.scss";
+
+// Media Queries //
+@import "imports/mediaQ.scss";
