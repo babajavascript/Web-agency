@@ -52,17 +52,20 @@ nav {
   margin-bottom: 0;
   padding: 0;
 }
-
 .premiereul li:hover a {
   border-top: 5px solid #3baed7;
   padding-top: 45px;
+  animation: hovera 300ms ease-in-out;
 }
 
-.navonedefault a {
-  border-top: 5px solid #3baed7;
-  padding-top: 45px;
+@keyframes hovera {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 .navone:link {
   color: #63686d;
 }
@@ -88,44 +91,38 @@ nav {
   position: relative;
 }
 
-.bg figure img {
+.photo {
+  width: 100%;
+  margin-top: 115px;
+  position: absolute;
+  animation: AutoSlide 7s ease-in-out 2s alternate infinite;
+}
+
+.photodeux {
   width: 100%;
   margin-top: 115px;
 }
 
-/* les fleches  sur l'image petite fille*/
-#conteneur-fleche {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
+@keyframes AutoSlide {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-#conteneur-fleche .fleche i {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
-  line-height: 60px;
-  cursor: pointer;
-  color: white;
-}
-
-#flechegauche i {
-  padding-right: 15px;
-  text-align: right;
-  position: relative;
-  right: 40px;
-}
-
-#flechedroite i {
-  padding-left: 15px;
-  text-align: left;
-  position: relative;
-  left: 40px;
-}
-
 /* le texte et le bouton dans l'image */
 .textflottant {
   width: 40%;
@@ -159,6 +156,12 @@ nav {
   box-shadow: 0 3px 0 #1d8db5;
   margin-top: 30px;
   font-size: 1.2em;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+  cursor: pointer;
+}
+.buttonimage:hover {
+  transform: scale(1.13);
 }
 
 .buttonimage a:link {
@@ -330,6 +333,7 @@ p {
 .navtwo {
   margin-bottom: 30px;
   position: relative;
+  cursor: pointer;
 }
 
 .navtwo li {
@@ -370,9 +374,8 @@ p {
   display: none;
 }
 
-.deuxiemeul .navtwo1 {
-  background-color: #5cadd3;
-  border-bottom: 4px solid #4494bb;
+.navtwo1, .navtwo {
+  border-bottom: 4px solid #e5e5e5;
 }
 
 .flechettedefaut {
@@ -384,6 +387,7 @@ p {
   color: #4494bb;
   top: 51px;
   left: 10px;
+  display: none;
 }
 
 .navtwo a {
@@ -391,8 +395,8 @@ p {
   text-decoration: none;
 }
 
-.navtwo1 a {
-  color: white;
+.navtwo1:hover .flechettedefaut {
+  display: block;
 }
 
 .navtwo:hover .flechette {
@@ -406,8 +410,17 @@ p {
 .navtwo:hover {
   background-color: #5cadd3;
   border-bottom: 4px solid #4494bb;
+  animation: navtwo 500ms;
 }
 
+@keyframes navtwo {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .navtwo:hover a {
   color: white;
 }
@@ -446,12 +459,13 @@ p {
 #imagesProjets img {
   width: 100%;
   height: 250px;
+  cursor: pointer;
 }
 
-#imagesProjets img:hover + figcaption,
-#imagesProjets figcaption:hover {
-  visibility: visible;
+#imagesProjets img:hover + figcaption {
   cursor: pointer;
+  transform: scale(1);
+  transform-origin: left 100%;
 }
 
 #imagesProjets figcaption {
@@ -462,7 +476,13 @@ p {
   width: 100%;
   height: 50px;
   bottom: 4px;
-  visibility: hidden;
+  transform: scale(0);
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+  transform-origin: left 100%;
+}
+#imagesProjets figcaption:hover {
+  transform: scale(1);
 }
 
 .textportfo {
@@ -555,6 +575,10 @@ input[type=submit] {
 @media screen and (max-width: 1024px) {
   .buttonimage {
     margin-top: 10px;
+    transform: scale(1);
+  }
+  .buttonimage:hover {
+    transform: scale(1);
   }
 
   .letout {
@@ -580,25 +604,6 @@ input[type=submit] {
     padding: 3px;
     width: 110px;
     margin-top: 16px;
-  }
-
-  #conteneur-fleche {
-    top: 58%;
-  }
-
-  #conteneur-fleche .fleche i {
-    width: 40px;
-    height: 55px;
-    border-radius: 60px;
-    line-height: 55px;
-  }
-
-  #flechegauche i {
-    right: 25px;
-  }
-
-  #flechedroite i {
-    left: 25px;
   }
 
   .background {
@@ -676,7 +681,7 @@ input[type=submit] {
     display: none;
   }
 
-  .flechettedefaut {
+  .navtwo1:hover .flechettedefaut {
     display: none;
   }
 }
@@ -691,32 +696,12 @@ input[type=submit] {
 
   .buttonimage {
     padding: 3px;
-    width: 110px;
-    margin-top: 16px;
+    width: 70px;
+    margin-top: 29px;
+    font-size: 0.8em;
   }
 
-  #conteneur-fleche {
-    top: 65%;
-  }
-
-  #conteneur-fleche .fleche i {
-    width: 30px;
-    height: 40px;
-    border-radius: 60px;
-    line-height: 40px;
-  }
-
-  #flechegauche i {
-    right: 14px;
-  }
-
-  #flechedroite i {
-    left: 14px;
-  }
-
-  .icone2,
-.icone1,
-.icone3 {
+  .icone2, .icone1, .icone3 {
     font-size: 19px;
     float: left;
     margin-left: -120px;

@@ -2,6 +2,11 @@
 @media screen and (max-width: 1024px) {
     .buttonimage {
         margin-top: 10px;
+        transform: scale(1);;
+        &:hover{
+            transform: scale(1);
+        
+    }
     }
     .letout {
         display: flex;
@@ -23,21 +28,6 @@
         padding: 3px;
         width: 110px;
         margin-top: 16px;
-    }
-    #conteneur-fleche {
-        top: 58%;
-    }
-    #conteneur-fleche .fleche i {
-        width: 40px;
-        height: 55px;
-        border-radius: 60px;
-        line-height: 55px;
-    }
-    #flechegauche i {
-        right: 25px;
-    }
-    #flechedroite i {
-        left: 25px;
     }
     .background {
         position: static;
@@ -104,7 +94,7 @@
     .navtwo:hover .flechette2 {
         display: none;
     }
-    .flechettedefaut {
+    .navtwo1:hover .flechettedefaut {
         display: none;
     }
 }
@@ -117,28 +107,11 @@
     }
     .buttonimage {
         padding: 3px;
-        width: 110px;
-        margin-top: 16px;
+        width: 70px;
+        margin-top: 29px;
+        font-size: 0.8em;
     }
-    #conteneur-fleche {
-        top: 65%;
-    }
-
-    #conteneur-fleche .fleche i {
-        width: 30px;
-        height: 40px;
-        border-radius: 60px;
-        line-height: 40px;
-    }
-    #flechegauche i {
-        right: 14px;
-    }
-    #flechedroite i {
-        left: 14px;
-    }
-    .icone2,
-    .icone1,
-    .icone3 {
+    .icone2,.icone1,.icone3 {
         font-size: 19px;
         float: left;
         margin-left: -120px;

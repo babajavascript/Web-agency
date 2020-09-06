@@ -27,6 +27,7 @@
 .navtwo {
     margin-bottom: 30px;
     position: relative;
+    cursor: pointer;
 }
 .navtwo li {
     top: 100px;
@@ -61,9 +62,8 @@
     left: 10px;
     display: none;
 }
-.deuxiemeul .navtwo1 {
-    background-color: #5cadd3;
-    border-bottom: 4px solid #4494bb;
+.navtwo1,  .navtwo {
+    border-bottom: 4px solid #e5e5e5;
 }
 .flechettedefaut {
     position: absolute;
@@ -74,13 +74,14 @@
     color: #4494bb;
     top: 51px;
     left: 10px;
+    display: none;
 }
 .navtwo a {
     color: #65696e;
     text-decoration: none;
 }
-.navtwo1 a {
-    color: white;
+.navtwo1:hover .flechettedefaut {
+    display: block;
 }
 .navtwo:hover .flechette {
     display: block;
@@ -91,6 +92,15 @@
 .navtwo:hover {
     background-color: #5cadd3;
     border-bottom: 4px solid #4494bb;
+    animation: navtwo 500ms;
+}
+@keyframes navtwo {
+    0%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .navtwo:hover a {
     color: white;
@@ -125,12 +135,14 @@
 #imagesProjets img {
     width: 100%;
     height: 250px;
-}
-#imagesProjets img:hover + figcaption,
-#imagesProjets figcaption:hover {
-    visibility: visible;
     cursor: pointer;
 }
+#imagesProjets img:hover + figcaption {
+    cursor: pointer;
+    transform: scale(1);
+    transform-origin: left 100%;
+}
+
 #imagesProjets figcaption {
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
@@ -139,9 +151,15 @@
     width: 100%;
     height: 50px;
     bottom: 4px;
-    visibility: hidden;
+    transform: scale(0);
+    cursor: pointer;
+    transition: transform 250ms ease-in-out ;
+    transform-origin: left 100%;
+    &:hover{
+        transform: scale(1);
+    }
 }
-.textportfo {
+    .textportfo {
     font-size: 13px;
 }
 #imagesProjets strong {
