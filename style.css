@@ -190,7 +190,7 @@ nav {
 
 /* premiere section NOS SERVICE */
 section {
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .sectionh1 {
@@ -642,6 +642,10 @@ input[type=submit] {
 
   .texteimage {
     margin-top: 10px;
+  }
+
+  .sectionh1 {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 484px) {
